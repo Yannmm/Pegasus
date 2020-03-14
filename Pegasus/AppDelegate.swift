@@ -19,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AMapServices.shared().enableHTTPS = true
         AMapServices.shared()?.apiKey = "050a433a6ce80ce4fb2764d6e1247ff7"
         
-        Locator.only.on()
-        
         return true
     }
 

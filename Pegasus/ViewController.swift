@@ -35,33 +35,23 @@ class ViewController: UIViewController {
             b.edges.equalToSuperview()
         }
         
-        searchIt()
+//        searchIt()
     }
 
     @objc private func searchIt() {
-//        let request = AMapPOIKeywordsSearchRequest()
-//        request.keywords = "景点"
-//        request.requireExtension = true
-//        request.city = "成都"
-//
-//        request.cityLimit = true
-//        request.requireSubPOIs = true
-//
-//        search.aMapPOIKeywordsSearch(request)
-        
-        searcher.surroundings { [unowned self] (pois) in
-            let annos = pois.map { p -> MAPointAnnotation in
-                let a = MAPointAnnotation()
-                a.coordinate = p.coordinate
-                a.title = p.name
-                a.subtitle = p.address
-                return a
+
+        Radar().surroundings().done {
+            let annos = $0.map { p -> PoiAnnotation in
+                return PoiAnnotation(title: p.name,
+                                      subtitle: p.address,
+                                      coordinate: p.coordinate,
+                                      poiid: p.uid)
             }
             self.mapView.addAnnotations(annos)
+        }.catch {
+            print($0)
         }
     }
-    
-    private let searcher = PoiSearcher()
 }
 
 extension ViewController: MAMapViewDelegate {
@@ -69,23 +59,20 @@ extension ViewController: MAMapViewDelegate {
         
         guard annotation.title != "当前位置" else { return nil }
         
-        if annotation.isKind(of: MAPointAnnotation.self) {
-            let pointReuseIndetifier = "pointReuseIndetifier"
-            var annotationView: MAPinAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: pointReuseIndetifier) as! MAPinAnnotationView?
-            
-            if annotationView == nil {
-                annotationView = MAPinAnnotationView(annotation: annotation, reuseIdentifier: pointReuseIndetifier)
+        if let a = annotation as? PoiAnnotation {
+            var marker = mapView.dequeueReusableAnnotationView(withIdentifier: "123321") as? MapMarkerAnnotationView
+            if marker == nil {
+                marker = MapMarkerAnnotationView(annotation: a, reuseIdentifier: "123321")
             }
             
-            annotationView!.canShowCallout = true
-            annotationView!.animatesDrop = true
-            annotationView!.isDraggable = true
-            annotationView!.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
+            marker?.onAccessoryViewTap = {
+                print("开启这个点的导航")
+//                Compass.only.tttt(annotation.coordinate)
+                Compass.only.route(to: a, poiid: a.poiid)
+            }
             
-//            let idx = annotations.index(of: annotation as! MAPointAnnotation)
-            annotationView!.pinColor = .green
             
-            return annotationView!
+            return marker!
         }
         
         return nil

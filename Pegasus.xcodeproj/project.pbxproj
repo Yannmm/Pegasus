@@ -15,13 +15,18 @@
 		7298D596241510D000145FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7298D594241510D000145FCE /* LaunchScreen.storyboard */; };
 		7298D59E241511B400145FCE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7298D59D241511B400145FCE /* LICENSE */; };
 		7298D5A0241511BA00145FCE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7298D59F241511BA00145FCE /* README.md */; };
-		7298D5A2241511C200145FCE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7298D5A1241511C100145FCE /* Podfile */; };
-		7298D5A42419156100145FCE /* PoiSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5A32419156100145FCE /* PoiSearcher.swift */; };
-		7298D5A6241918C700145FCE /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5A5241918C700145FCE /* Locator.swift */; };
+		7298D5A42419156100145FCE /* Radar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5A32419156100145FCE /* Radar.swift */; };
+		7298D5A6241918C700145FCE /* Satellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5A5241918C700145FCE /* Satellite.swift */; };
 		7298D5BC241C86C700145FCE /* LEGO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5BB241C86C600145FCE /* LEGO.swift */; };
 		7298D5BF241C882E00145FCE /* AMapPOI+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5BE241C882E00145FCE /* AMapPOI+Helper.swift */; };
 		7298D5C2241C97B100145FCE /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 7298D5C1241C97B100145FCE /* Podfile.lock */; };
-		964D1F7EFC47024DFB25E312 /* Pods_Pegasus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B770567CCD001D9C80212FA /* Pods_Pegasus.framework */; };
+		7298D5C4241CA59C00145FCE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7298D5C3241CA59B00145FCE /* Podfile */; };
+		7298D5C6241CACB500145FCE /* MapMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5C5241CACB500145FCE /* MapMarkerAnnotationView.swift */; };
+		7298D5C8241CB60000145FCE /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5C7241CB60000145FCE /* Compass.swift */; };
+		7298D5CA241CBBEB00145FCE /* AMapNaviPoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5C9241CBBEB00145FCE /* AMapNaviPoint+Helper.swift */; };
+		7298D5CD241CFAA400145FCE /* PoiAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5CC241CFAA400145FCE /* PoiAnnotation.swift */; };
+		7298D5CF241D210200145FCE /* AMapGeoPoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */; };
+		D6CF3D7AD51BC2032C8A7C2C /* libPods-Pegasus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B8DFDD286C5E93E64C2541 /* libPods-Pegasus.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,13 +42,18 @@
 		7298D597241510D000145FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7298D59D241511B400145FCE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = Pegasus/LICENSE; sourceTree = SOURCE_ROOT; };
 		7298D59F241511BA00145FCE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Pegasus/README.md; sourceTree = SOURCE_ROOT; };
-		7298D5A1241511C100145FCE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = Pegasus/Podfile; sourceTree = SOURCE_ROOT; };
-		7298D5A32419156100145FCE /* PoiSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiSearcher.swift; sourceTree = "<group>"; };
-		7298D5A5241918C700145FCE /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		7298D5A32419156100145FCE /* Radar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radar.swift; sourceTree = "<group>"; };
+		7298D5A5241918C700145FCE /* Satellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satellite.swift; sourceTree = "<group>"; };
 		7298D5BB241C86C600145FCE /* LEGO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEGO.swift; sourceTree = "<group>"; };
 		7298D5BE241C882E00145FCE /* AMapPOI+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AMapPOI+Helper.swift"; sourceTree = "<group>"; };
-		7298D5C1241C97B100145FCE /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = file; path = Podfile.lock; sourceTree = SOURCE_ROOT; };
-		9B770567CCD001D9C80212FA /* Pods_Pegasus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pegasus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7298D5C1241C97B100145FCE /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = SOURCE_ROOT; };
+		7298D5C3241CA59B00145FCE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7298D5C5241CACB500145FCE /* MapMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerAnnotationView.swift; sourceTree = "<group>"; };
+		7298D5C7241CB60000145FCE /* Compass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compass.swift; sourceTree = "<group>"; };
+		7298D5C9241CBBEB00145FCE /* AMapNaviPoint+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AMapNaviPoint+Helper.swift"; sourceTree = "<group>"; };
+		7298D5CC241CFAA400145FCE /* PoiAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiAnnotation.swift; sourceTree = "<group>"; };
+		7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AMapGeoPoint+Helper.swift"; sourceTree = "<group>"; };
+		D0B8DFDD286C5E93E64C2541 /* libPods-Pegasus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pegasus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964D1F7EFC47024DFB25E312 /* Pods_Pegasus.framework in Frameworks */,
+				D6CF3D7AD51BC2032C8A7C2C /* libPods-Pegasus.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +98,15 @@
 		7298D588241510CE00145FCE /* Pegasus */ = {
 			isa = PBXGroup;
 			children = (
+				7298D5CB241CFA9300145FCE /* Model */,
 				7298D5BD241C87F900145FCE /* Extensions */,
 				7298D589241510CE00145FCE /* AppDelegate.swift */,
 				7298D58B241510CE00145FCE /* SceneDelegate.swift */,
 				7298D58D241510CE00145FCE /* ViewController.swift */,
-				7298D5A32419156100145FCE /* PoiSearcher.swift */,
-				7298D5A5241918C700145FCE /* Locator.swift */,
+				7298D5C5241CACB500145FCE /* MapMarkerAnnotationView.swift */,
+				7298D5A32419156100145FCE /* Radar.swift */,
+				7298D5C7241CB60000145FCE /* Compass.swift */,
+				7298D5A5241918C700145FCE /* Satellite.swift */,
 				7298D5BB241C86C600145FCE /* LEGO.swift */,
 				7298D58F241510CE00145FCE /* Main.storyboard */,
 				7298D592241510D000145FCE /* Assets.xcassets */,
@@ -107,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				7298D5BE241C882E00145FCE /* AMapPOI+Helper.swift */,
+				7298D5C9241CBBEB00145FCE /* AMapNaviPoint+Helper.swift */,
+				7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				7298D597241510D000145FCE /* Info.plist */,
-				7298D5A1241511C100145FCE /* Podfile */,
+				7298D5C3241CA59B00145FCE /* Podfile */,
 				7298D5C1241C97B100145FCE /* Podfile.lock */,
 				7298D59D241511B400145FCE /* LICENSE */,
 				7298D59F241511BA00145FCE /* README.md */,
@@ -123,10 +138,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7298D5CB241CFA9300145FCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7298D5CC241CFAA400145FCE /* PoiAnnotation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F9EBC33135E51A0D9CD6141A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B770567CCD001D9C80212FA /* Pods_Pegasus.framework */,
+				D0B8DFDD286C5E93E64C2541 /* libPods-Pegasus.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,12 +214,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7298D5A2241511C200145FCE /* Podfile in Resources */,
 				7298D596241510D000145FCE /* LaunchScreen.storyboard in Resources */,
 				7298D593241510D000145FCE /* Assets.xcassets in Resources */,
 				7298D5A0241511BA00145FCE /* README.md in Resources */,
 				7298D59E241511B400145FCE /* LICENSE in Resources */,
 				7298D591241510CE00145FCE /* Main.storyboard in Resources */,
+				7298D5C4241CA59C00145FCE /* Podfile in Resources */,
 				7298D5C2241C97B100145FCE /* Podfile.lock in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,12 +274,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7298D5BC241C86C700145FCE /* LEGO.swift in Sources */,
+				7298D5CA241CBBEB00145FCE /* AMapNaviPoint+Helper.swift in Sources */,
 				7298D58E241510CE00145FCE /* ViewController.swift in Sources */,
-				7298D5A42419156100145FCE /* PoiSearcher.swift in Sources */,
+				7298D5CD241CFAA400145FCE /* PoiAnnotation.swift in Sources */,
+				7298D5A42419156100145FCE /* Radar.swift in Sources */,
 				7298D58A241510CE00145FCE /* AppDelegate.swift in Sources */,
-				7298D5A6241918C700145FCE /* Locator.swift in Sources */,
+				7298D5A6241918C700145FCE /* Satellite.swift in Sources */,
 				7298D5BF241C882E00145FCE /* AMapPOI+Helper.swift in Sources */,
+				7298D5C6241CACB500145FCE /* MapMarkerAnnotationView.swift in Sources */,
 				7298D58C241510CE00145FCE /* SceneDelegate.swift in Sources */,
+				7298D5C8241CB60000145FCE /* Compass.swift in Sources */,
+				7298D5CF241D210200145FCE /* AMapGeoPoint+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
