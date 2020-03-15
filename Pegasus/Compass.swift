@@ -8,25 +8,18 @@
 
 import AMapNaviKit
 
+protocol Poi {
+    var coordinate: CLLocationCoordinate2D { get }
+    var alias: String { get }
+    var id: String { get }
+}
+
 class Compass: NSObject {
     static let only = Compass()
     
-    
-    func tttt(_ coordinate: CLLocationCoordinate2D) {
-        
-//        let from = AMapNaviPoint(coordinate: Satellite.only.latestLocation.coordinate)
-//        let to = AMapNaviPoint(coordinate: coordinate)
-//
-//
-//        let config = AMapNaviCompositeUserConfig.init()
-//        config.setRoutePlanPOIType(AMapNaviRoutePlanPOIType.start, location: from, name: "我的位置", poiId: nil)
-//        config.setRoutePlanPOIType(AMapNaviRoutePlanPOIType.end, location: to, name: "终点", poiId: nil)
-//        engine.presentRoutePlanViewController(withOptions: config)
-    }
-    
-    func route(to destination: MAPointAnnotation, poiid: String) {
+    func route(to poi: Poi) {
         let config = AMapNaviCompositeUserConfig.init()
-        config.setRoutePlanPOIType(AMapNaviRoutePlanPOIType.end, location: AMapNaviPoint(coordinate: destination.coordinate), name: destination.title, poiId: poiid)
+        config.setRoutePlanPOIType(AMapNaviRoutePlanPOIType.end, location: AMapNaviPoint(coordinate: poi.coordinate), name: poi.alias, poiId: poi.id)
         
         engine.presentRoutePlanViewController(withOptions: config)
     }

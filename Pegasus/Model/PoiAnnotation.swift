@@ -20,3 +20,8 @@ class PoiAnnotation: MAPointAnnotation {
     }
     
 }
+
+extension PoiAnnotation: Poi {
+    var alias: String { return title }
+    var id: String { return poiid }
+}

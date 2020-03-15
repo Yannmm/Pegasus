@@ -15,3 +15,8 @@ extension AMapPOI {
             longitude: CLLocationDegrees(self.location!.longitude))
     }
 }
+
+extension AMapPOI: Poi {
+    var alias: String { return name }
+    var id: String { return uid }
+}

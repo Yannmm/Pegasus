@@ -2,8 +2,8 @@
 //  LEGO.swift
 //  Lego
 //
-//  Created by Rayman Yan on 2019/10/10.
-//  Copyright © 2019 Align Technology Inc. All rights reserved.
+//  Created by Yannmm on 2019/10/10.
+//  Copyright © 2019 RIP. All rights reserved.
 //
 
 import UIKit

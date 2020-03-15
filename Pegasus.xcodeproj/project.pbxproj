@@ -26,6 +26,8 @@
 		7298D5CA241CBBEB00145FCE /* AMapNaviPoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5C9241CBBEB00145FCE /* AMapNaviPoint+Helper.swift */; };
 		7298D5CD241CFAA400145FCE /* PoiAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5CC241CFAA400145FCE /* PoiAnnotation.swift */; };
 		7298D5CF241D210200145FCE /* AMapGeoPoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */; };
+		7298D5D1241DDB4400145FCE /* PoiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5D0241DDB4400145FCE /* PoiListViewController.swift */; };
+		7298D5D6241DE9A900145FCE /* PoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5D5241DE9A900145FCE /* PoiTableViewCell.swift */; };
 		D6CF3D7AD51BC2032C8A7C2C /* libPods-Pegasus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B8DFDD286C5E93E64C2541 /* libPods-Pegasus.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		7298D5C9241CBBEB00145FCE /* AMapNaviPoint+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AMapNaviPoint+Helper.swift"; sourceTree = "<group>"; };
 		7298D5CC241CFAA400145FCE /* PoiAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiAnnotation.swift; sourceTree = "<group>"; };
 		7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AMapGeoPoint+Helper.swift"; sourceTree = "<group>"; };
+		7298D5D0241DDB4400145FCE /* PoiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListViewController.swift; sourceTree = "<group>"; };
+		7298D5D5241DE9A900145FCE /* PoiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiTableViewCell.swift; sourceTree = "<group>"; };
 		D0B8DFDD286C5E93E64C2541 /* libPods-Pegasus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pegasus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,16 +102,16 @@
 		7298D588241510CE00145FCE /* Pegasus */ = {
 			isa = PBXGroup;
 			children = (
+				7298D5D3241DE72200145FCE /* UI */,
+				7298D5D2241DDC3D00145FCE /* Stable */,
 				7298D5CB241CFA9300145FCE /* Model */,
-				7298D5BD241C87F900145FCE /* Extensions */,
+				7298D5BD241C87F900145FCE /* Extension */,
 				7298D589241510CE00145FCE /* AppDelegate.swift */,
 				7298D58B241510CE00145FCE /* SceneDelegate.swift */,
-				7298D58D241510CE00145FCE /* ViewController.swift */,
 				7298D5C5241CACB500145FCE /* MapMarkerAnnotationView.swift */,
 				7298D5A32419156100145FCE /* Radar.swift */,
 				7298D5C7241CB60000145FCE /* Compass.swift */,
 				7298D5A5241918C700145FCE /* Satellite.swift */,
-				7298D5BB241C86C600145FCE /* LEGO.swift */,
 				7298D58F241510CE00145FCE /* Main.storyboard */,
 				7298D592241510D000145FCE /* Assets.xcassets */,
 				7298D594241510D000145FCE /* LaunchScreen.storyboard */,
@@ -116,14 +120,14 @@
 			path = Pegasus;
 			sourceTree = "<group>";
 		};
-		7298D5BD241C87F900145FCE /* Extensions */ = {
+		7298D5BD241C87F900145FCE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				7298D5BE241C882E00145FCE /* AMapPOI+Helper.swift */,
 				7298D5C9241CBBEB00145FCE /* AMapNaviPoint+Helper.swift */,
 				7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */,
 			);
-			path = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		7298D5C0241C978F00145FCE /* Supporting Files */ = {
@@ -144,6 +148,32 @@
 				7298D5CC241CFAA400145FCE /* PoiAnnotation.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7298D5D2241DDC3D00145FCE /* Stable */ = {
+			isa = PBXGroup;
+			children = (
+				7298D5BB241C86C600145FCE /* LEGO.swift */,
+			);
+			path = Stable;
+			sourceTree = "<group>";
+		};
+		7298D5D3241DE72200145FCE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7298D58D241510CE00145FCE /* ViewController.swift */,
+				7298D5D0241DDB4400145FCE /* PoiListViewController.swift */,
+				7298D5D4241DE99600145FCE /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7298D5D4241DE99600145FCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7298D5D5241DE9A900145FCE /* PoiTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F9EBC33135E51A0D9CD6141A /* Frameworks */ = {
@@ -275,6 +305,7 @@
 			files = (
 				7298D5BC241C86C700145FCE /* LEGO.swift in Sources */,
 				7298D5CA241CBBEB00145FCE /* AMapNaviPoint+Helper.swift in Sources */,
+				7298D5D1241DDB4400145FCE /* PoiListViewController.swift in Sources */,
 				7298D58E241510CE00145FCE /* ViewController.swift in Sources */,
 				7298D5CD241CFAA400145FCE /* PoiAnnotation.swift in Sources */,
 				7298D5A42419156100145FCE /* Radar.swift in Sources */,
@@ -284,6 +315,7 @@
 				7298D5C6241CACB500145FCE /* MapMarkerAnnotationView.swift in Sources */,
 				7298D58C241510CE00145FCE /* SceneDelegate.swift in Sources */,
 				7298D5C8241CB60000145FCE /* Compass.swift in Sources */,
+				7298D5D6241DE9A900145FCE /* PoiTableViewCell.swift in Sources */,
 				7298D5CF241D210200145FCE /* AMapGeoPoint+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
