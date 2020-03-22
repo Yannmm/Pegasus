@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725801AE241E083B00B9241A /* Cloudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725801AD241E083B00B9241A /* Cloudy.swift */; };
+		725801B0241E0BC800B9241A /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725801AF241E0BC800B9241A /* WeatherViewController.swift */; };
 		7298D58A241510CE00145FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D589241510CE00145FCE /* AppDelegate.swift */; };
 		7298D58C241510CE00145FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D58B241510CE00145FCE /* SceneDelegate.swift */; };
 		7298D58E241510CE00145FCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D58D241510CE00145FCE /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		0C2E8341A972604094E2F99E /* Pods-Pegasus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pegasus.release.xcconfig"; path = "Target Support Files/Pods-Pegasus/Pods-Pegasus.release.xcconfig"; sourceTree = "<group>"; };
 		3C1FDD752D218D425552B762 /* Pods-Pegasus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pegasus.debug.xcconfig"; path = "Target Support Files/Pods-Pegasus/Pods-Pegasus.debug.xcconfig"; sourceTree = "<group>"; };
+		725801AD241E083B00B9241A /* Cloudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudy.swift; sourceTree = "<group>"; };
+		725801AF241E0BC800B9241A /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		7298D586241510CE00145FCE /* Pegasus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pegasus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7298D589241510CE00145FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7298D58B241510CE00145FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		725801AC241E07DE00B9241A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7298D5A32419156100145FCE /* Radar.swift */,
+				7298D5C7241CB60000145FCE /* Compass.swift */,
+				7298D5A5241918C700145FCE /* Satellite.swift */,
+				725801AD241E083B00B9241A /* Cloudy.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		7298D57D241510CE00145FCE = {
 			isa = PBXGroup;
 			children = (
@@ -102,16 +117,13 @@
 		7298D588241510CE00145FCE /* Pegasus */ = {
 			isa = PBXGroup;
 			children = (
+				725801AC241E07DE00B9241A /* API */,
 				7298D5D3241DE72200145FCE /* UI */,
 				7298D5D2241DDC3D00145FCE /* Stable */,
 				7298D5CB241CFA9300145FCE /* Model */,
 				7298D5BD241C87F900145FCE /* Extension */,
 				7298D589241510CE00145FCE /* AppDelegate.swift */,
 				7298D58B241510CE00145FCE /* SceneDelegate.swift */,
-				7298D5C5241CACB500145FCE /* MapMarkerAnnotationView.swift */,
-				7298D5A32419156100145FCE /* Radar.swift */,
-				7298D5C7241CB60000145FCE /* Compass.swift */,
-				7298D5A5241918C700145FCE /* Satellite.swift */,
 				7298D58F241510CE00145FCE /* Main.storyboard */,
 				7298D592241510D000145FCE /* Assets.xcassets */,
 				7298D594241510D000145FCE /* LaunchScreen.storyboard */,
@@ -163,6 +175,7 @@
 			children = (
 				7298D58D241510CE00145FCE /* ViewController.swift */,
 				7298D5D0241DDB4400145FCE /* PoiListViewController.swift */,
+				725801AF241E0BC800B9241A /* WeatherViewController.swift */,
 				7298D5D4241DE99600145FCE /* View */,
 			);
 			path = UI;
@@ -172,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				7298D5D5241DE9A900145FCE /* PoiTableViewCell.swift */,
+				7298D5C5241CACB500145FCE /* MapMarkerAnnotationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,10 +322,12 @@
 				7298D5D1241DDB4400145FCE /* PoiListViewController.swift in Sources */,
 				7298D58E241510CE00145FCE /* ViewController.swift in Sources */,
 				7298D5CD241CFAA400145FCE /* PoiAnnotation.swift in Sources */,
+				725801B0241E0BC800B9241A /* WeatherViewController.swift in Sources */,
 				7298D5A42419156100145FCE /* Radar.swift in Sources */,
 				7298D58A241510CE00145FCE /* AppDelegate.swift in Sources */,
 				7298D5A6241918C700145FCE /* Satellite.swift in Sources */,
 				7298D5BF241C882E00145FCE /* AMapPOI+Helper.swift in Sources */,
+				725801AE241E083B00B9241A /* Cloudy.swift in Sources */,
 				7298D5C6241CACB500145FCE /* MapMarkerAnnotationView.swift in Sources */,
 				7298D58C241510CE00145FCE /* SceneDelegate.swift in Sources */,
 				7298D5C8241CB60000145FCE /* Compass.swift in Sources */,

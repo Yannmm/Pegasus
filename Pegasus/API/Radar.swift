@@ -36,6 +36,8 @@ private class _AMapCityPoiSearcher: NSObject, AMapSearchDelegate {
         req.city = city
         req.cityLimit = true
         req.requireSubPOIs = true
+        req.offset = 50
+        req.page = 1
         search.aMapPOIKeywordsSearch(req)
         return promise
     }

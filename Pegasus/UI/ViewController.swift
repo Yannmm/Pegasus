@@ -8,7 +8,8 @@
 
 import UIKit
 import AMapNaviKit
-import AMapLocationKit
+import AMapSearchKit
+import PromiseKit
 
 
 class ViewController: UIViewController {
@@ -28,7 +29,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "搜索", style: .done, target: self, action: #selector(searchIt))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "天气", style: .done, target: self, action: #selector(weather))
+        self.navigationItem.title = "附近景点"
         
         view.addSubview(mapView)
         mapView.lego.build { (b) in
@@ -36,6 +38,27 @@ class ViewController: UIViewController {
         }
         
         searchIt()
+    }
+    
+    @objc private func weather() {
+        firstly {
+            Cloudy().tell()
+        }.done { [unowned self] live in
+            var message: String! = live.weather
+            message += "\n"
+            message += "\(live.temperature!)℃"
+            message += "\n"
+            message += "\(live.windDirection!)风" + "\(live.windPower!)级"
+            message += "\n"
+            message += "湿度\(live.humidity!)%"
+            let alert = UIAlertController(title: live.city, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "👌", style: .default, handler: { (_) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }.catch { (error) in
+            print(error)
+        }
     }
 
     @objc private func searchIt() {
