@@ -16,10 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        
         AMapServices.shared().enableHTTPS = true
         AMapServices.shared()?.apiKey = "050a433a6ce80ce4fb2764d6e1247ff7"
         
+        // @see https://github.com/sinaweibosdk/weibo_ios_sdk/issues/417
+        WeiboSDK.registerApp("3561756925")
+        WeiboSDK.enableDebugMode(true)
+        
         Satellite.only.on()
+        
         
         return true
     }
@@ -37,7 +43,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return UserSession.current.handleUrl(url)
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return UserSession.current.handleUrl(url)
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        return UserSession.current.handleUrl(url)
+    }
 }
-

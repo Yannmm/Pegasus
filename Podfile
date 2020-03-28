@@ -10,6 +10,8 @@ target 'Pegasus' do
   pod 'AMapSearch'
   pod 'AMapLocation'
   
+  pod "Weibo_SDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
+  
   pod "PromiseKit", "~> 6.8"
 
 end

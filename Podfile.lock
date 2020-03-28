@@ -15,12 +15,14 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
+  - Weibo_SDK (3.2.7)
 
 DEPENDENCIES:
   - AMapLocation
   - AMapNavi
   - AMapSearch
   - PromiseKit (~> 6.8)
+  - Weibo_SDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
 
 SPEC REPOS:
   trunk:
@@ -30,13 +32,23 @@ SPEC REPOS:
     - AMapSearch
     - PromiseKit
 
+EXTERNAL SOURCES:
+  Weibo_SDK:
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
+
+CHECKOUT OPTIONS:
+  Weibo_SDK:
+    :commit: 90a5cf8d5dfb03ccf62b1c8e1a17fea766dc806b
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
+
 SPEC CHECKSUMS:
   AMapFoundation: 672dc3a4759cb733f447c1e1b020f7ba2729f4ab
   AMapLocation: b4162db67f813508a14ee7e05c7ee4073785221d
   AMapNavi: 4667acc6dd1da5fee08aceb2071e1547efaf1bc5
   AMapSearch: 6bd6d361c5eb00110e0bffa4acf88b7bb9f7e059
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  Weibo_SDK: 5a4d08f7e1fedbb635435e4585c8c0439c7da089
 
-PODFILE CHECKSUM: 24197c7f779bf455b1ba46f4d76aae8bd2ec37c3
+PODFILE CHECKSUM: fb0ef394e2729a51ca293efec40a535c05a07de6
 
 COCOAPODS: 1.8.4

@@ -24,12 +24,6 @@ class PoiListViewController: UIViewController {
            b.edges.equalToSuperview()
         }
         
-//        Satellite.only.locate().done { tuple in
-//            self.parent?.navigationItem.title = tuple.1?.city
-//        }.catch { (error) in
-//            print(error)
-//        }
-        
         Radar().city().done { [unowned self] in
             self.pois = $0
             self.tableView.reloadData()

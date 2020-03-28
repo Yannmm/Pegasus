@@ -12,6 +12,7 @@ import AMapSearchKit
 import PromiseKit
 
 
+
 class ViewController: UIViewController {
     
     private lazy var mapView: MAMapView = {
@@ -29,7 +30,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(onUserSessionChange(_:)), name: .onUserSessionChange, object: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登陆", style: .done, target: self, action: #selector(manageSession))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "天气", style: .done, target: self, action: #selector(weather))
+        
         self.navigationItem.title = "附近景点"
         
         view.addSubview(mapView)
@@ -38,6 +42,11 @@ class ViewController: UIViewController {
         }
         
         searchIt()
+    }
+    
+    @objc private func onUserSessionChange(_ noti: Notification) {
+        let title = UserSession.current.isSignedin ? UserSession.current.user!.name : "登陆"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: .done, target: self, action: #selector(manageSession))
     }
     
     @objc private func weather() {
@@ -78,24 +87,27 @@ class ViewController: UIViewController {
 
 extension ViewController: MAMapViewDelegate {
     func mapView(_ mapView: MAMapView!, viewFor annotation: MAAnnotation!) -> MAAnnotationView! {
-        
-        
-        
         if let a = annotation as? PoiAnnotation {
             var marker = mapView.dequeueReusableAnnotationView(withIdentifier: "123321") as? MapMarkerAnnotationView
             if marker == nil {
                 marker = MapMarkerAnnotationView(annotation: a, reuseIdentifier: "123321")
             }
-            
             marker?.onAccessoryViewTap = {
                 print("开启这个点的导航")
                 Compass.only.route(to: a)
             }
-            
-            
             return marker!
         }
-        
         return nil
+    }
+}
+
+extension ViewController {
+    @objc private func manageSession() {
+        if !UserSession.current.isSignedin {
+            present(SigninViewController(), animated: true, completion: nil)
+        } else {
+            UserSession.current.signOut()
+        }
     }
 }

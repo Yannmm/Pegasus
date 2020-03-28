@@ -30,6 +30,8 @@
 		7298D5CF241D210200145FCE /* AMapGeoPoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */; };
 		7298D5D1241DDB4400145FCE /* PoiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5D0241DDB4400145FCE /* PoiListViewController.swift */; };
 		7298D5D6241DE9A900145FCE /* PoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5D5241DE9A900145FCE /* PoiTableViewCell.swift */; };
+		72EEA914242F0EC300A288A6 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEA913242F0EC300A288A6 /* UserSession.swift */; };
+		72EEA916242F7B2F00A288A6 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEA915242F7B2F00A288A6 /* SigninViewController.swift */; };
 		D6CF3D7AD51BC2032C8A7C2C /* libPods-Pegasus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B8DFDD286C5E93E64C2541 /* libPods-Pegasus.a */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +40,7 @@
 		3C1FDD752D218D425552B762 /* Pods-Pegasus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pegasus.debug.xcconfig"; path = "Target Support Files/Pods-Pegasus/Pods-Pegasus.debug.xcconfig"; sourceTree = "<group>"; };
 		725801AD241E083B00B9241A /* Cloudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudy.swift; sourceTree = "<group>"; };
 		725801AF241E0BC800B9241A /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		7298D586241510CE00145FCE /* Pegasus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pegasus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7298D586241510CE00145FCE /* 乐乐去旅行.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "乐乐去旅行.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7298D589241510CE00145FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7298D58B241510CE00145FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7298D58D241510CE00145FCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,9 @@
 		7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AMapGeoPoint+Helper.swift"; sourceTree = "<group>"; };
 		7298D5D0241DDB4400145FCE /* PoiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListViewController.swift; sourceTree = "<group>"; };
 		7298D5D5241DE9A900145FCE /* PoiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiTableViewCell.swift; sourceTree = "<group>"; };
+		72EEA90F242EDB8700A288A6 /* Pegasus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pegasus-Bridging-Header.h"; sourceTree = "<group>"; };
+		72EEA913242F0EC300A288A6 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		72EEA915242F7B2F00A288A6 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		D0B8DFDD286C5E93E64C2541 /* libPods-Pegasus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pegasus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +97,7 @@
 				7298D5C7241CB60000145FCE /* Compass.swift */,
 				7298D5A5241918C700145FCE /* Satellite.swift */,
 				725801AD241E083B00B9241A /* Cloudy.swift */,
+				72EEA913242F0EC300A288A6 /* UserSession.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -109,7 +115,7 @@
 		7298D587241510CE00145FCE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7298D586241510CE00145FCE /* Pegasus.app */,
+				7298D586241510CE00145FCE /* 乐乐去旅行.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 		7298D5C0241C978F00145FCE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				72EEA90F242EDB8700A288A6 /* Pegasus-Bridging-Header.h */,
 				7298D597241510D000145FCE /* Info.plist */,
 				7298D5C3241CA59B00145FCE /* Podfile */,
 				7298D5C1241C97B100145FCE /* Podfile.lock */,
@@ -174,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				7298D58D241510CE00145FCE /* ViewController.swift */,
+				72EEA915242F7B2F00A288A6 /* SigninViewController.swift */,
 				7298D5D0241DDB4400145FCE /* PoiListViewController.swift */,
 				725801AF241E0BC800B9241A /* WeatherViewController.swift */,
 				7298D5D4241DE99600145FCE /* View */,
@@ -217,7 +225,7 @@
 			);
 			name = Pegasus;
 			productName = Pegasus;
-			productReference = 7298D586241510CE00145FCE /* Pegasus.app */;
+			productReference = 7298D586241510CE00145FCE /* 乐乐去旅行.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -232,6 +240,7 @@
 				TargetAttributes = {
 					7298D585241510CE00145FCE = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -325,6 +334,8 @@
 				725801B0241E0BC800B9241A /* WeatherViewController.swift in Sources */,
 				7298D5A42419156100145FCE /* Radar.swift in Sources */,
 				7298D58A241510CE00145FCE /* AppDelegate.swift in Sources */,
+				72EEA916242F7B2F00A288A6 /* SigninViewController.swift in Sources */,
+				72EEA914242F0EC300A288A6 /* UserSession.swift in Sources */,
 				7298D5A6241918C700145FCE /* Satellite.swift in Sources */,
 				7298D5BF241C882E00145FCE /* AMapPOI+Helper.swift in Sources */,
 				725801AE241E083B00B9241A /* Cloudy.swift in Sources */,
@@ -477,6 +488,7 @@
 			baseConfigurationReference = 3C1FDD752D218D425552B762 /* Pods-Pegasus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX885U799E;
 				INFOPLIST_FILE = Pegasus/Info.plist;
@@ -484,8 +496,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.yannmm.Pegasus;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.yannmm.lelego;
+				PRODUCT_NAME = "乐乐去旅行";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pegasus/Pegasus-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,6 +510,7 @@
 			baseConfigurationReference = 0C2E8341A972604094E2F99E /* Pods-Pegasus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QX885U799E;
 				INFOPLIST_FILE = Pegasus/Info.plist;
@@ -503,8 +518,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.yannmm.Pegasus;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.yannmm.lelego;
+				PRODUCT_NAME = "乐乐去旅行";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pegasus/Pegasus-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
