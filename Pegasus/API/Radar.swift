@@ -11,18 +11,27 @@ import PromiseKit
 
 class Radar: NSObject {
     
+    // 根据定位寻找周围 poi 点，返回一个 promise，携带的数据结构为 [AMapPOI]
     func around() -> Promise<[AMapPOI]> {
-        return firstly {
+        return firstly { // firstly 表示首先
+            // 首先获取定位
+            // Satellite 是定位服务，locate() 表示获取位置
             Satellite.only.locate()
         }.then { tuple in
+            // tuple.0 是坐标点
+            // _AMapAroundPoiSearcher 是执行搜索的具体类
             _AMapAroundPoiSearcher().go(tuple.0!)
         }
     }
     
+    // 寻找当前城市的 poi 点
     func city() -> Promise<[AMapPOI]> {
         return firstly {
+            // 还是首先获取定位
             Satellite.only.locate()
         }.then { tuple in
+            // tuple.1?.city 是城市
+            // _AMapCityPoiSearcher 是执行搜索的具体类
             _AMapCityPoiSearcher().go(tuple.1?.city ?? "成都")
         }
     }

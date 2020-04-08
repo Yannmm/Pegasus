@@ -16,17 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        
+        // 高德地图启动项
         AMapServices.shared().enableHTTPS = true
         AMapServices.shared()?.apiKey = "050a433a6ce80ce4fb2764d6e1247ff7"
         
+        // 微博 SDK 启动项
         // @see https://github.com/sinaweibosdk/weibo_ios_sdk/issues/417
         WeiboSDK.registerApp("3561756925")
         WeiboSDK.enableDebugMode(true)
         
+        // 启动定位服务
         Satellite.only.on()
         
-        
+        // 跳转至根控制器 -> ViewController.swift
         return true
     }
 
