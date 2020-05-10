@@ -30,6 +30,11 @@
 		7298D5CF241D210200145FCE /* AMapGeoPoint+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */; };
 		7298D5D1241DDB4400145FCE /* PoiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5D0241DDB4400145FCE /* PoiListViewController.swift */; };
 		7298D5D6241DE9A900145FCE /* PoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298D5D5241DE9A900145FCE /* PoiTableViewCell.swift */; };
+		72C276D72467E94D00251339 /* PoiSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C276D62467E94D00251339 /* PoiSearchViewController.swift */; };
+		72C276D92467EF0A00251339 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C276D82467EF0A00251339 /* Throttler.swift */; };
+		72C276DB2467F3BA00251339 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C276DA2467F3BA00251339 /* RecommendationViewController.swift */; };
+		72C276DD2467F5E700251339 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C276DC2467F5E700251339 /* UIColor+Helper.swift */; };
+		72C276DF246802B100251339 /* NSMutableAttributedString+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C276DE246802B100251339 /* NSMutableAttributedString+Helper.swift */; };
 		72EEA914242F0EC300A288A6 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEA913242F0EC300A288A6 /* UserSession.swift */; };
 		72EEA916242F7B2F00A288A6 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEA915242F7B2F00A288A6 /* SigninViewController.swift */; };
 		D6CF3D7AD51BC2032C8A7C2C /* libPods-Pegasus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B8DFDD286C5E93E64C2541 /* libPods-Pegasus.a */; };
@@ -63,6 +68,11 @@
 		7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AMapGeoPoint+Helper.swift"; sourceTree = "<group>"; };
 		7298D5D0241DDB4400145FCE /* PoiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListViewController.swift; sourceTree = "<group>"; };
 		7298D5D5241DE9A900145FCE /* PoiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiTableViewCell.swift; sourceTree = "<group>"; };
+		72C276D62467E94D00251339 /* PoiSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiSearchViewController.swift; sourceTree = "<group>"; };
+		72C276D82467EF0A00251339 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
+		72C276DA2467F3BA00251339 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
+		72C276DC2467F5E700251339 /* UIColor+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
+		72C276DE246802B100251339 /* NSMutableAttributedString+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Helper.swift"; sourceTree = "<group>"; };
 		72EEA90F242EDB8700A288A6 /* Pegasus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pegasus-Bridging-Header.h"; sourceTree = "<group>"; };
 		72EEA913242F0EC300A288A6 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		72EEA915242F7B2F00A288A6 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +154,8 @@
 				7298D5BE241C882E00145FCE /* AMapPOI+Helper.swift */,
 				7298D5C9241CBBEB00145FCE /* AMapNaviPoint+Helper.swift */,
 				7298D5CE241D210200145FCE /* AMapGeoPoint+Helper.swift */,
+				72C276DC2467F5E700251339 /* UIColor+Helper.swift */,
+				72C276DE246802B100251339 /* NSMutableAttributedString+Helper.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -173,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				7298D5BB241C86C600145FCE /* LEGO.swift */,
+				72C276D82467EF0A00251339 /* Throttler.swift */,
 			);
 			path = Stable;
 			sourceTree = "<group>";
@@ -183,6 +196,8 @@
 				7298D58D241510CE00145FCE /* ViewController.swift */,
 				72EEA915242F7B2F00A288A6 /* SigninViewController.swift */,
 				7298D5D0241DDB4400145FCE /* PoiListViewController.swift */,
+				72C276D62467E94D00251339 /* PoiSearchViewController.swift */,
+				72C276DA2467F3BA00251339 /* RecommendationViewController.swift */,
 				725801AF241E0BC800B9241A /* WeatherViewController.swift */,
 				7298D5D4241DE99600145FCE /* View */,
 			);
@@ -327,10 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7298D5BC241C86C700145FCE /* LEGO.swift in Sources */,
+				72C276D72467E94D00251339 /* PoiSearchViewController.swift in Sources */,
 				7298D5CA241CBBEB00145FCE /* AMapNaviPoint+Helper.swift in Sources */,
 				7298D5D1241DDB4400145FCE /* PoiListViewController.swift in Sources */,
 				7298D58E241510CE00145FCE /* ViewController.swift in Sources */,
 				7298D5CD241CFAA400145FCE /* PoiAnnotation.swift in Sources */,
+				72C276D92467EF0A00251339 /* Throttler.swift in Sources */,
 				725801B0241E0BC800B9241A /* WeatherViewController.swift in Sources */,
 				7298D5A42419156100145FCE /* Radar.swift in Sources */,
 				7298D58A241510CE00145FCE /* AppDelegate.swift in Sources */,
@@ -339,9 +356,12 @@
 				7298D5A6241918C700145FCE /* Satellite.swift in Sources */,
 				7298D5BF241C882E00145FCE /* AMapPOI+Helper.swift in Sources */,
 				725801AE241E083B00B9241A /* Cloudy.swift in Sources */,
+				72C276DB2467F3BA00251339 /* RecommendationViewController.swift in Sources */,
 				7298D5C6241CACB500145FCE /* MapMarkerAnnotationView.swift in Sources */,
 				7298D58C241510CE00145FCE /* SceneDelegate.swift in Sources */,
 				7298D5C8241CB60000145FCE /* Compass.swift in Sources */,
+				72C276DF246802B100251339 /* NSMutableAttributedString+Helper.swift in Sources */,
+				72C276DD2467F5E700251339 /* UIColor+Helper.swift in Sources */,
 				7298D5D6241DE9A900145FCE /* PoiTableViewCell.swift in Sources */,
 				7298D5CF241D210200145FCE /* AMapGeoPoint+Helper.swift in Sources */,
 			);

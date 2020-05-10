@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PV6-pR-5sc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PV6-pR-5sc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,11 +19,46 @@
                     <connections>
                         <segue destination="SdZ-uC-MVq" kind="relationship" relationship="viewControllers" id="bpt-80-FW3"/>
                         <segue destination="k0l-Yd-ngT" kind="relationship" relationship="viewControllers" id="uhA-B7-DNe"/>
+                        <segue destination="BVR-HM-TSL" kind="relationship" relationship="viewControllers" id="tzG-FZ-0Zj"/>
+                        <segue destination="8bc-4W-rQr" kind="relationship" relationship="viewControllers" id="zVd-RR-v2d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvQ-u3-Tgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2976" y="-162"/>
+        </scene>
+        <!--搜索-->
+        <scene sceneID="skO-W1-sSD">
+            <objects>
+                <navigationController id="BVR-HM-TSL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="搜索" image="baseline_photo_filter_black_18pt" id="1nB-yM-kX6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YBF-Ei-eCA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LmG-4t-BYu" kind="relationship" relationship="rootViewController" id="4Eo-pJ-9pC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDT-TK-16R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2078" y="-1207"/>
+        </scene>
+        <!--Poi Search View Controller-->
+        <scene sceneID="EM4-lg-L7Z">
+            <objects>
+                <viewController id="LmG-4t-BYu" customClass="PoiSearchViewController" customModule="乐乐去旅行" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oRp-xn-5oE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="x5E-YU-YBq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8hm-Zg-QyM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Inu-Fd-gbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1366" y="-1208"/>
         </scene>
         <!--附近-->
         <scene sceneID="utE-ta-ff3">
@@ -45,7 +80,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pegasus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="乐乐去旅行" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,6 +92,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1365" y="-481"/>
+        </scene>
+        <!--推荐-->
+        <scene sceneID="NrA-D1-d1m">
+            <objects>
+                <navigationController id="8bc-4W-rQr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="推荐" image="baseline_explore_black_18pt" id="brQ-mt-keW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qSH-6D-Cke">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yr1-VI-jNa" kind="relationship" relationship="rootViewController" id="d6y-rW-YnW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8G-hU-gag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4197" y="-162"/>
+        </scene>
+        <!--Recommendation View Controller-->
+        <scene sceneID="c4d-8H-dum">
+            <objects>
+                <viewController id="yr1-VI-jNa" customClass="RecommendationViewController" customModule="乐乐去旅行" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6jH-Ob-XJi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="R9B-x3-DP0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AKc-Fz-yjS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCc-R8-vD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4197" y="524"/>
         </scene>
         <!--城市-->
         <scene sceneID="3fj-gK-dhe">
@@ -78,7 +146,7 @@
         <!--Poi List View Controller-->
         <scene sceneID="LxO-DE-ete">
             <objects>
-                <viewController id="azp-6U-CHk" customClass="PoiListViewController" customModule="Pegasus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="azp-6U-CHk" customClass="PoiListViewController" customModule="乐乐去旅行" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Tv-4v-qSr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +161,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="baseline_explore_black_18pt" width="18" height="18"/>
         <image name="baseline_location_city_black_18pt" width="18" height="18"/>
         <image name="baseline_location_on_black_18pt" width="18" height="18"/>
+        <image name="baseline_photo_filter_black_18pt" width="18" height="18"/>
     </resources>
 </document>

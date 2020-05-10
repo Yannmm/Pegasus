@@ -60,7 +60,5 @@ extension PoiListViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let p = pois[indexPath.row]
         Compass.only.route(to: p)
-        
-//        Compass.only.route(to: a, poiid: a.poiid)
     }
 }

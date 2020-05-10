@@ -35,6 +35,54 @@ class Radar: NSObject {
             _AMapCityPoiSearcher().go(tuple.1?.city ?? "成都")
         }
     }
+    
+    // 根据关键字查询当前城市旅游景点
+    func keyword(_ text: String) -> Promise<[AMapPOI]> {
+        return firstly {
+            // 还是首先获取定位
+            Satellite.only.locate()
+        }.then { tuple in
+            // tuple.1?.city 是城市
+            // _AMapCityPoiSearcher 是执行搜索的具体类
+            _AMapKeywordPoiSearcher().go(text, tuple.1?.city ?? "成都")
+        }
+    }
+}
+
+private class _AMapKeywordPoiSearcher: NSObject, AMapSearchDelegate {
+    func go(_ keyword: String, _ city: String) -> Promise<[AMapPOI]> {
+        let req = AMapPOIKeywordsSearchRequest()
+        req.keywords = keyword
+        req.types = "风景名胜"
+        req.requireExtension = true
+        req.city = city
+        req.cityLimit = true
+        req.requireSubPOIs = true
+        req.offset = 50
+        req.page = 1
+        search.aMapPOIKeywordsSearch(req)
+        return promise
+    }
+    
+    private let (promise, seal) = Promise<[AMapPOI]>.pending()
+    private var retainCycle: _AMapKeywordPoiSearcher?
+    private let search = AMapSearchAPI()!
+
+    override init() {
+        super.init()
+        retainCycle = self
+        search.delegate = self // does not retain hence the `retainCycle` property
+
+        let _ = promise.ensure { self.retainCycle = nil }
+    }
+    
+    func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
+        seal.fulfill(response.pois)
+    }
+    
+    func aMapSearchRequest(_ request: Any!, didFailWithError error: Error!) {
+        seal.reject(error)
+    }
 }
 
 private class _AMapCityPoiSearcher: NSObject, AMapSearchDelegate {
@@ -105,14 +153,3 @@ private class _AMapAroundPoiSearcher: NSObject, AMapSearchDelegate {
         seal.reject(error)
     }
 }
-
-
-//        let request = AMapPOIKeywordsSearchRequest()
-//        request.keywords = "景点"
-//        request.requireExtension = true
-//        request.city = "成都"
-//
-//        request.cityLimit = true
-//        request.requireSubPOIs = true
-//
-//        search.aMapPOIKeywordsSearch(request)

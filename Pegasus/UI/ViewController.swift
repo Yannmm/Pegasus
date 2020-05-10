@@ -87,6 +87,8 @@ class ViewController: UIViewController {
         Radar().around().done {
             // $0 是结果，将其转换为地图所需的标注对象
             // map 表示将一个数组转换为另一个数组，如 [int].map { i in double(i) } -> [double]
+            let k = $0.map { $0.images }.compactMap { $0 }.flatMap { $0 }
+            print(k)
             let annos = $0.map { p -> PoiAnnotation in
                 return PoiAnnotation(title: p.name,
                                       subtitle: p.address,
