@@ -80,5 +80,7 @@ extension PoiSearchViewController: UITableViewDataSource, UITableViewDelegate {
         Compass.only.route(to: p)
     }
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) { view.endEditing(true) }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchBar.resignFirstResponder()
+    }
 }

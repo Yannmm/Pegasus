@@ -32,12 +32,6 @@ class ViewController: UIViewController {
     // 视图加载时调用
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 注册用户登入/登出通知
-        NotificationCenter.default.addObserver(self, selector: #selector(onUserSessionChange(_:)), name: .onUserSessionChange, object: nil)
-        // 导航栏左侧按钮
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登陆", style: .done, target: self, action: #selector(manageSession))
-        // 导航栏右侧按钮
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "天气", style: .done, target: self, action: #selector(weather))
         
         // 导航栏标题
         self.navigationItem.title = "附近景点"
@@ -51,33 +45,6 @@ class ViewController: UIViewController {
         
         // 第一次搜索，搜索附近 poi 点
         searchIt()
-    }
-    
-    // 用户登陆状态发生变化
-    @objc private func onUserSessionChange(_ noti: Notification) {
-        let title = UserSession.current.isSignedin ? UserSession.current.user!.name : "登陆"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: .done, target: self, action: #selector(manageSession))
-    }
-    
-    @objc private func weather() {
-        firstly {
-            Cloudy().tell()
-        }.done { [unowned self] live in
-            var message: String! = live.weather
-            message += "\n"
-            message += "\(live.temperature!)℃"
-            message += "\n"
-            message += "\(live.windDirection!)风" + "\(live.windPower!)级"
-            message += "\n"
-            message += "湿度\(live.humidity!)%"
-            let alert = UIAlertController(title: live.city, message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "👌", style: .default, handler: { (_) in
-                alert.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
-        }.catch { (error) in
-            print(error)
-        }
     }
 
     @objc private func searchIt() {
@@ -121,16 +88,5 @@ extension ViewController: MAMapViewDelegate {
             return marker!
         }
         return nil
-    }
-}
-
-extension ViewController {
-    // 导航栏左侧按钮动作方法
-    @objc private func manageSession() {
-        if !UserSession.current.isSignedin { // 如果未登陆，就呈现登陆界面
-            present(SigninViewController(), animated: true, completion: nil)
-        } else { // 如果已经登陆，则登出
-            UserSession.current.signOut()
-        }
     }
 }
